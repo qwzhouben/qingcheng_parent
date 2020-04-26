@@ -1,7 +1,10 @@
 package com.qingcheng.entity;
 
+import lombok.Data;
+
 import java.io.Serializable;
 
+@Data
 public class Result implements Serializable {
 
     private Integer code;//业务返回码  0：成功  1:错误
@@ -18,19 +21,4 @@ public class Result implements Serializable {
         this.message="执行成功";
     }
 
-    public Integer getCode() {
-        return code;
-    }
-
-    public void setCode(Integer code) {
-        this.code = code;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
 }
