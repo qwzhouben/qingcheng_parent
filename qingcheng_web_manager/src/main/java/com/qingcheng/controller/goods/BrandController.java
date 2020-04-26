@@ -91,7 +91,7 @@ public class BrandController {
         return new Result();
     }
 
-    @DeleteMapping("/delete")
+    @GetMapping("/delete")
     public Result delete(Integer id){
         brandService.delete(id);
         return new Result();

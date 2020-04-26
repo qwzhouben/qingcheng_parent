@@ -112,7 +112,7 @@ public class BrandServiceImpl implements BrandService {
     private Example createExample(Map<String, Object> searchMap) {
         Example example = new Example(Brand.class);
         Example.Criteria criteria = example.createCriteria();
-        if (CollectionUtils.isEmpty(searchMap)) {
+        if (!CollectionUtils.isEmpty(searchMap)) {
             //名称条件
             if(!StringUtils.isEmpty(searchMap.get("name"))){
                 criteria.andLike("name","%"+
